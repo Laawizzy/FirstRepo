@@ -1,0 +1,61 @@
+//20'ye kadar sayı olan bir zar
+            //15-20 arasında büyük bir zarar
+            //10-15 arasında orta zarar
+            //5-10 zarar yok
+            //0-5 kendine zarar 
+            // 4. veya 5. zar 18 üstünde gelirse  ek zarar verir.
+
+            Random zar = new Random();
+
+            int birinciAtış= zar.Next(1, 21);
+            int ikinciAtış = zar.Next(1, 21);
+            int üçüncüAtış = zar.Next(1, 21);
+            int dördüncüAtış = zar.Next(1, 21);
+            int beşinciAtış = zar.Next(1, 21);
+            float ortalama = (birinciAtış + ikinciAtış + üçüncüAtış ) / 3f;
+
+            if (ortalama > 15) 
+            {
+                Console.WriteLine("Büyük Zarar Verdin");
+
+}
+
+            if(ortalama > 10 && ortalama <= 15)//|| or
+            {
+                Console.WriteLine("Orta Zarar verdin");
+
+
+            }
+
+            if (ortalama > 5 && ortalama <= 10)
+            {
+                Console.WriteLine(" Zarar Yok");
+
+
+            }
+
+            if(ortalama <= 5)
+            {
+                Console.WriteLine("Kendine Zarar Verdin");
+
+            }
+            
+            if (dördüncüAtış >= 2 || beşinciAtış >= 2)
+            {
+                Console.WriteLine("Ek Zarar Verecek");
+            }
+
+
+            Console.WriteLine(ortalama);
+            Console.ReadLine();
+
+
+
+
+
+
+        }
+
+
+    }
+}
